@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="564.0" prefWidth="1101.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.HomeController">
+    <children>
+        <Pane onMouseClicked="#handleButtonAction" prefHeight="575.0" prefWidth="429.0" style="-fx-background-color: #0C39FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fitHeight="52.0" fitWidth="52.0" layoutX="75.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../home/icons8_student_40px.png" />
+                    </image>
+                </ImageView>
+                <Label alignment="CENTER" layoutX="140.0" layoutY="54.0" prefHeight="23.0" prefWidth="186.0" text="Student Affairs System" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" layoutX="148.0" layoutY="77.0" prefHeight="23.0" prefWidth="114.0" text="Dashboard" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="12.0" />
+                    </font>
+                </Label>
+                <Button fx:id="btnExit" layoutX="34.0" layoutY="518.0" mnemonicParsing="false" onMouseClicked="#handleButtonAction" prefHeight="32.0" prefWidth="114.0" styleClass="button2" stylesheets="@../styling/fullpackstyling.css" text="Exit" />
+                <Label fx:id="lblAllStudents" layoutX="28.0" layoutY="151.0" prefHeight="32.0" prefWidth="141.0" text="All Students :" textFill="#fffdfd" />
+                <Label fx:id="lbl1ST" layoutX="185.0" layoutY="151.0" prefHeight="32.0" prefWidth="141.0" text="Students in Year 1 :" textFill="#fffdfd" />
+                <Label fx:id="lbl2ND" layoutX="28.0" layoutY="197.0" prefHeight="32.0" prefWidth="141.0" text="Students in Year 2 :" textFill="#fffdfd" />
+                <Label fx:id="lbl3RD" layoutX="185.0" layoutY="197.0" prefHeight="32.0" prefWidth="141.0" text="Students in Year 3 :" textFill="#fffdfd" />
+                <Label fx:id="lblMales" layoutX="28.0" layoutY="237.0" prefHeight="32.0" prefWidth="141.0" text="Males :" textFill="#fffdfd" />
+                <Label fx:id="lblFemales" layoutX="178.0" layoutY="237.0" prefHeight="32.0" prefWidth="141.0" text="Females :" textFill="#fffdfd" />
+            </children>
+        </Pane>
+        <Button fx:id="btnStudents" layoutX="437.0" layoutY="82.0" mnemonicParsing="false" onMouseClicked="#handleButtonAction" prefHeight="32.0" prefWidth="114.0" styleClass="button2" stylesheets="@../styling/fullpackstyling.css" text="Add/List Students" />
+        <Label alignment="CENTER" layoutX="613.0" layoutY="35.0" prefHeight="23.0" prefWidth="186.0" text="Main Panel">
+            <font>
+                <Font name="Segoe UI" size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnStudent" layoutX="572.0" layoutY="82.0" mnemonicParsing="false" onMouseClicked="#handleButtonAction" prefHeight="32.0" prefWidth="153.0" styleClass="button2" stylesheets="@../styling/fullpackstyling.css" text="Edit / Show Student info." />
+        <Button fx:id="btnExams" layoutX="437.0" layoutY="132.0" mnemonicParsing="false" onMouseClicked="#handleButtonAction" prefHeight="32.0" prefWidth="114.0" styleClass="button2" stylesheets="@../styling/fullpackstyling.css" text="Exam Results" />
+    </children>
+</AnchorPane>

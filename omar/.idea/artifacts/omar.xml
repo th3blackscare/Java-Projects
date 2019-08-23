@@ -1,0 +1,27 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="omar">
+    <output-path>$PROJECT_DIR$/out/artifacts/omar</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="sample.Main" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="icons">
+          <JavaFxApplicationIcons>
+            <option name="linuxIcon" value="$PROJECT_DIR$/src/sample/icons8_student_40px.png" />
+            <option name="windowsIcon" value="$PROJECT_DIR$/src/sample/images/icons8_student.ico" />
+          </JavaFxApplicationIcons>
+        </option>
+        <option name="nativeBundle" value="exe" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="omar.jar">
+        <element id="module-output" name="omar" />
+      </element>
+    </root>
+  </artifact>
+</component>
