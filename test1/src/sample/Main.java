@@ -1,38 +1,39 @@
-package com.otfayoum;
+package sample;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class Main extends Application {
-    //define your offsets here
     private double xOffset = 0;
     private double yOffset = 0;
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/com/otfayoum/fxml/login.fxml"));
-        primaryStage.initStyle(StageStyle.TRANSPARENT);
-        primaryStage.setTitle("OT Fayoum");
-        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/com/otfayoum/images/icons8_car_100px.png")));
-
-        //grab your root here
-        root.setOnMousePressed(event -> {
-            xOffset = event.getSceneX();
-            yOffset = event.getSceneY();
+        Parent root = FXMLLoader.load(getClass().getResource("fxml/login.fxml"));
+        primaryStage.setTitle("OT");
+        primaryStage.setMaximized(false);
+        primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.show();
+        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("images/icons8_car_96px.png")));
+        root.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                xOffset = event.getSceneX();
+                yOffset = event.getSceneY();
+            }
         });
-
-        //move around here
         root.setOnMouseDragged(event -> {
             primaryStage.setX(event.getScreenX() - xOffset);
             primaryStage.setY(event.getScreenY() - yOffset);
         });
         Scene scene = new Scene(root);
-        //set transparent
         scene.setFill(Color.TRANSPARENT);
         primaryStage.setScene(scene);
         primaryStage.show();

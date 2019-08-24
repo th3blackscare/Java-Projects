@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import com.otfayoum.utils.test;
+import com.otfayoum.utils.user;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -27,15 +27,18 @@ public class HomeController implements Initializable {
     @FXML
     private Button btnLogout;
 
+    @FXML
+    private Button btnDash;
+
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         // TODO
-        btnName.setText(test.getName());
+        btnName.setText(user.getLName());
     }
 
-    public void handleButtonAction(MouseEvent event) {
+    public void handleButtonAction(MouseEvent event) throws IOException {
         if(event.getSource() == btnLogout){
             try {
                 Node node = (Node) event.getSource();
@@ -54,6 +57,30 @@ public class HomeController implements Initializable {
                 Stage stage = (Stage) node.getScene().getWindow();
                 stage.close();
             }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+        else if(event.getSource() == btnDash ){
+            try {
+                Node node = (Node) event.getSource();
+                Stage stage = (Stage) node.getScene().getWindow();
+                stage.close();
+                Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/com/otfayoum/fxml/DashFX.fxml")));
+                stage.setScene(scene);
+                stage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        else if(event.getSource() == btnName){
+            try {
+                Node node = (Node) event.getSource();
+                Stage stage = (Stage) node.getScene().getWindow();
+                stage.close();
+                Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/com/otfayoum/fxml/profile.fxml")));
+                stage.setScene(scene);
+                stage.show();
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         }
