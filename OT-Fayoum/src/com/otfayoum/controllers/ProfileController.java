@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
@@ -50,6 +51,12 @@ public class ProfileController implements Initializable {
     @FXML
     private TextField txtRole;
 
+    @FXML
+    private Label txtExit;
+
+    @FXML
+    private Label txtUpdate;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         txtID.setText(String.valueOf(user.getLID()));
@@ -59,8 +66,8 @@ public class ProfileController implements Initializable {
         txtUser.setText(user.getLUserName());
         txtAddress.setText(user.getLAddress());
         txtRole.setText(user.getLRole());
-        btnExit.setText("Cancel");
-        btnLogout.setText("Update");
+        txtExit.setText("Cancel");
+        txtUpdate.setText("Update");
     }
 
     public void onEnter(ActionEvent event) {
@@ -74,6 +81,16 @@ public class ProfileController implements Initializable {
                 txtEmail.setText(u.getEmail());
                 txtPhone.setText(u.getPhone_number());
                 txtUser.setText(u.getUserName(Integer.valueOf(txtQe.getText())));
+                txtAddress.setText(u.getAddress());
+                txtRole.setText(u.getRole());
+            }
+            else{
+                u.getUser(txtQe.getText());
+                txtID.setText(String.valueOf(u.getID()));
+                txtName.setText(u.getName());
+                txtEmail.setText(u.getEmail());
+                txtPhone.setText(u.getPhone_number());
+                txtUser.setText(u.getUserName(u.getID()));
                 txtAddress.setText(u.getAddress());
                 txtRole.setText(u.getRole());
             }

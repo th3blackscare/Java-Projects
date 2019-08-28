@@ -31,13 +31,13 @@
          <children>
             <Pane layoutX="-25.0" layoutY="-178.0" prefHeight="303.0" prefWidth="467.0" rotate="41.6" style="-fx-background-color: #FA2C56; -fx-background-radius: 70;" />
             <Button fx:id="btnExit" layoutX="704.0" layoutY="574.0" mnemonicParsing="false" onMouseClicked="#handleButtonAction" opacity="0.7" prefHeight="61.0" prefWidth="111.0" styleClass="button2" stylesheets="@../../../css/fullpackstyling.css" />
-            <Label alignment="CENTER" layoutX="701.0" layoutY="596.0" prefHeight="17.0" prefWidth="111.0" text="Exit" textFill="WHITE">
+            <Label fx:id="txtExit" alignment="CENTER" layoutX="701.0" layoutY="596.0" prefHeight="17.0" prefWidth="111.0" text="Exit" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="13.0" />
                </font>
             </Label>
             <Button fx:id="btnLogout" layoutX="584.0" layoutY="574.0" mnemonicParsing="false" onMouseClicked="#handleButtonAction" opacity="0.7" prefHeight="61.0" prefWidth="111.0" styleClass="button2" stylesheets="@../../../css/fullpackstyling.css" />
-            <Label alignment="CENTER" layoutX="581.0" layoutY="596.0" prefHeight="17.0" prefWidth="111.0" text="Update" textFill="WHITE">
+            <Label fx:id="txtUpdate" alignment="CENTER" layoutX="585.0" layoutY="596.0" prefHeight="17.0" prefWidth="111.0" text="Update" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="13.0" />
                </font>

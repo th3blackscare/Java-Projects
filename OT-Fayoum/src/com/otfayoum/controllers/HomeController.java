@@ -30,7 +30,8 @@ public class HomeController implements Initializable {
     @FXML
     private Button btnDash;
 
-
+    @FXML
+    private Button btnOrders;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -60,12 +61,12 @@ public class HomeController implements Initializable {
                 e.printStackTrace();
             }
         }
-        else if(event.getSource() == btnDash ){
+        else if(event.getSource() == btnOrders ){
             try {
                 Node node = (Node) event.getSource();
                 Stage stage = (Stage) node.getScene().getWindow();
                 stage.close();
-                Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/com/otfayoum/fxml/DashFX.fxml")));
+                Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/com/otfayoum/fxml/Orders.fxml")));
                 stage.setScene(scene);
                 stage.show();
             } catch (IOException e) {
